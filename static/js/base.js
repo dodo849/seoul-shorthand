@@ -24,11 +24,11 @@ setInterval(function() {
 
         $(".carousel .image-1").animate({
             left: '-100vw'
-        }, 1500, 'easeOutBounce');
+        }, 1500, 'swing');
 
         $(".carousel .image-2").animate({
             left: '0'
-        }, 1500, 'easeOutBounce');
+        }, 1500, 'swing');
 
         switchCnt = 1;
     }
@@ -38,13 +38,13 @@ setInterval(function() {
 
         $(".carousel .image-2").animate({
             left: '-100vw'
-        }, 1500);
+        }, 1500, 'swing');
 
         $(".carousel .image-1").animate({
             left: '0'
-        }, 1500);
+        }, 1500, 'swing');
 
         switchCnt = 0;
     }
 
-}, 5000);
+}, 3000);

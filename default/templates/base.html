@@ -15,14 +15,14 @@
 <body>
     <nav>
         <div class="title">
-            <p>서울속기사무소</p>
+            <a href="{% url 'goMain' %}">서울속기사무소</p></a>
             <p>since 2010</p>
         </div>
         <div class="menu">
-            <a href="">소개</a>
-            <a href="">녹취록/회의록</a>
-            <a href="">경력</a>
-            <a href="">오시는길</a>
+            <a href="{% url 'goIntro' %}">소개</a>
+            <a href="{% url 'goAbout' %}">녹취록/회의록</a>
+            <a href="{% url 'goCareer' %}">경력</a>
+            <a href="{% url 'goRoad' %}">오시는길</a>
         </div>
     </nav>
     <div class="container">

@@ -8,6 +8,8 @@
 nav {
     display: flex;
     height: 10vh;
+
+    border-bottom: 1px solid #D9D9D9;
 }
 
 nav > .title {
@@ -31,6 +33,14 @@ nav > .menu > a{
     margin: 2rem;
     text-decoration:none;
     font-weight: bold;
+}
+
+nav > .menu > a:hover, nav > .menu > a:active{
+    border-bottom: 3px solid #252525;
+}
+
+.container{
+    min-height: 80vh;
 }
 
 /* 분리할 코드. - main 페이지 */
@@ -66,13 +76,17 @@ nav > .menu > a{
 }
 
 .carousel > .image-box {
-}
 
-.carousel .image{
     position: absolute;
+    overflow: hidden;
     width: 100vw;
     height: 80vh;
-    overflow: hidden;
+}
+
+.carousel .image {
+    position: absolute;
+    width: 100vw;
+    bottom: -10vh;
 }
 
 .carousel .image-1{
@@ -83,19 +97,96 @@ nav > .menu > a{
     left: 100vw;
 }
 
-.carousel .image-3{
-    left: 200vw;
+/* 분리할 코드 끝 */
+
+/* 분리할 코드. - intro 페이지 */
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.carousel .image-4{
-    left: 300vw;
+.sub-nav {
+    border: 2px solid #D9D9D9;
+    width: 300px;
+    margin: 4rem;
 }
 
-.carousel .image-5{
-    left: 400vw;
+.sub-nav > a {
+    display: block;
+    padding: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sub-nav > a:active, .sub-nav > a:hover {
+    background-color: #D9D9D9;
+}
+
+.sub-nav > a > p{
+    display: inline;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.content {
+    margin: 4rem 0;
+    padding-right: 4rem;
+    width: calc(100vw - 300px - 8rem - 4rem - 10px);
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content h3 > p{
+    font-size: 1.2rem;
+    display: inline;
+    margin-left: 0.7rem;
+}
+
+.content p{
+    line-height: 1.7rem;
+}
+
+.content > div {
+    margin-bottom: 3rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #252525;
+
+    position: relative;
+    z-index: 1;
+    left: -0.9rem;
+    top: 0.6rem;
+}
+
+li {
+    border-left: 1px solid #252525;
+    list-style: none;
+    padding: 0.6rem;
+}
+
+.img-box{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.img-box img{
+    width: 300px;
+    margin: 1rem;
 }
 
 /* 분리할 코드 끝 */
+
+
 
 footer {
     width: 100vw;
@@ -114,4 +205,10 @@ footer > div {
 footer > div > p {
     margin: 1.5rem 3rem;
     font-size: 0.8rem;
+}
+
+#map{
+    margin: 4rem auto;
+    width:60%;
+    height:400px;
 }

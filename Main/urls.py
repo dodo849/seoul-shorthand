@@ -19,5 +19,11 @@ from default import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.goMain),
+    path('', views.goMain, name = 'goMain'),
+    path('/intro', views.goIntro, name = 'goIntro'),
+    path('/about', views.goAbout, name = 'goAbout'),
+    path('/carrer', views.goCareer, name = 'goCareer'),
+    path('/road', views.goRoad, name = 'goRoad'),
+
+
 ]

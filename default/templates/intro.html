@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="sub-nav">
+    <a href="#history">회사연혁</a>
+    <a href="#me">신미영<p>소장</p></a>
+    <a href="#silver">김은영<p>소장</p></a>
+    <a href="#company-img">사무실 전경</a>
+</div>
+<div class="content">
+    <div id="history">
+        <h3>회사 연혁</h3>
+        <p>2010년 개업이래 흔들림 없이 서초동을 지켜왔으며, <br>
+            <strong>수만 건 이상의 다양한 작업으로 쌓은 노하우</strong>를 통해 고객님께 <strong>완벽한 작업물</strong>로 보답해드리겠습니다.</p>
+    </div>
+    <div id="me">
+        <h3>신미영<p>소장</p></h3>
+        <ul>
+            <li><div class="dot"></div>1996. 국제컴퓨터속기사무소</li>
+            <li><div class="dot"></div>2006. 최안나속기사사무소</li>
+            <li><div class="dot"></div>2010. 서울속기사무소 개업</li>
+        </ul>
+    </div>
+    <div id="silver">
+        <h3>김은영<p>소장</p></h3>
+        <ul>
+            <li><div class="dot"></div>2010. 서울속기사무소 개업</li>
+        </ul>
+    </div>
+    <div id="company-img">
+        <h3>회사 전경</h3>
+        <div>
+            <div class="img-box">
+                <a rel="fancybox" id="single_image" href="../../static/img/img1.JPG"><img src="../../static/img/img1.JPG" alt=""></a>
+                <a rel="fancybox" id="single_image" href="../../static/img/img2.JPG"><img src="../../static/img/img2.JPG" alt=""></a>
+            </div>
+            <div class="img-box">
+                <a rel="fancybox" id="single_image" href="/static/img/img3.JPG"><img src="../../static/img/img3.JPG" alt=""></a>
+                <a rel="fancybox" id="single_image" href="/static/img/img4.JPG"><img src="../../static/img/img4.JPG" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <a href="http://www.example?iframe">This goes to iframe</a>
+    <a href="http://www.example/data.php">This takes content using ajax</a>
+    
+</div>
+{% endblock %}
+
+{% block last %}
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="/fancybox/jquery.easing-1.3.pack.js"></script>
+<script src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+<script>
+    $(document).ready(function() {
+
+        /* This is basic - uses default settings */
+
+        $("#single_image").fancybox({
+            'overlayColor':'#f00',
+            'overlayOpacity':'0.2',
+            'transitionIn, ':'elastic',
+            'transitionOut':'elastic',
+            'speedIn':'600',
+            'speedOut':'200'
+        });
+    });
+
+</script>
+{% endblock %}

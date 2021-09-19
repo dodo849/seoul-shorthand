@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="map" style=""></div>
+
+
+{% endblock %}
+
+
+{% block last %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0wq8zyc75t"></script>
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.4927853, 127.0077858),
+        zoom: 18
+    };
+    
+    var map = new naver.maps.Map('map', mapOptions);
+
+    var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.4927853, 127.0077858),
+    map: map
+});
+    </script>
+{% endblock%}
