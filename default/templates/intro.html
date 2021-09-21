@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link rel="stylesheet" href="{% static 'css/intro.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="sub-nav">
@@ -31,43 +41,19 @@
         <h3>회사 전경</h3>
         <div>
             <div class="img-box">
-                <a rel="fancybox" id="single_image" href="../../static/img/img1.JPG"><img src="../../static/img/img1.JPG" alt=""></a>
-                <a rel="fancybox" id="single_image" href="../../static/img/img2.JPG"><img src="../../static/img/img2.JPG" alt=""></a>
+                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img1.JPG' %}"><img src="{% static 'img/img1.JPG' %}" alt=""></a>
+                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img2.JPG' %}"><img src="{% static 'img/img2.JPG' %}" alt=""></a>
             </div>
             <div class="img-box">
-                <a rel="fancybox" id="single_image" href="/static/img/img3.JPG"><img src="../../static/img/img3.JPG" alt=""></a>
-                <a rel="fancybox" id="single_image" href="/static/img/img4.JPG"><img src="../../static/img/img4.JPG" alt=""></a>
+                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img3.JPG' %}"><img src="{% static 'img/img3.JPG' %}" alt=""></a>
+                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img4.JPG' %}"><img src="{% static 'img/img4.JPG' %}" alt=""></a>
             </div>
         </div>
     </div>
-
-    <a href="http://www.example?iframe">This goes to iframe</a>
-    <a href="http://www.example/data.php">This takes content using ajax</a>
     
 </div>
 {% endblock %}
 
 {% block last %}
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> -->
-<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<script src="/fancybox/jquery.easing-1.3.pack.js"></script>
-<script src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
-<link rel="stylesheet" href="/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
-<script>
-    $(document).ready(function() {
-
-        /* This is basic - uses default settings */
-
-        $("#single_image").fancybox({
-            'overlayColor':'#f00',
-            'overlayOpacity':'0.2',
-            'transitionIn, ':'elastic',
-            'transitionOut':'elastic',
-            'speedIn':'600',
-            'speedOut':'200'
-        });
-    });
-
-</script>
 {% endblock %}

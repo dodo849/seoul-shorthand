@@ -1,24 +1,39 @@
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
-
     color: #252525;
 }
 
 nav {
     display: flex;
-    height: 10vh;
+    height: 85px;
 
     border-bottom: 1px solid #D9D9D9;
 }
 
 nav > .title {
     margin: auto 3rem;
+
+}
+
+nav > .title > a {
+    font-family: 'RIDIBatang';
+    text-decoration: none;
+    font-size: 1.4rem;
 }
 
 nav > .title > p {
-    font-size: 1.4rem;
+    font-family: 'RIDIBatang';
+    font-size: 1rem;
     text-align: center;
+    color: #777;
 }
 
 nav > .title > p:nth-child(2) {
@@ -48,21 +63,27 @@ nav > .menu > a:hover, nav > .menu > a:active{
     width: 100vw;
     height: 80vh;
     background-color: grey;
+    position: relative;
 }
 
 .carousel > .text-box{
     position: absolute;
     z-index: 2;
-    /* top 나중에 다시 조정하기 */
-    top: calc(50% - 4.3rem); 
+    height: 200px;
+    top: calc(50% - 100px);
     left: 3rem;
     vertical-align: middle;
 }
 
-.carousel > .text-box > h1 {
+.carousel > .text-box h1 {
+    height: 200px;
     color: white;
     font-size: 3.8rem;
     letter-spacing: 0.3rem;
+    margin: auto auto;
+    display: table-cell;
+    vertical-align: middle;
+    
 }
 
 .carousel > .black-layer{
@@ -85,8 +106,8 @@ nav > .menu > a:hover, nav > .menu > a:active{
 
 .carousel .image {
     position: absolute;
-    width: 100vw;
-    bottom: -10vh;
+    min-width: 100vw;
+    height: 80vh;
 }
 
 .carousel .image-1{
@@ -99,98 +120,57 @@ nav > .menu > a:hover, nav > .menu > a:active{
 
 /* 분리할 코드 끝 */
 
-/* 분리할 코드. - intro 페이지 */
 
-.container {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+/* 분리할 코드. - road 페이지 */
+
+.map-box {
+    margin: 2rem auto;
+    width: 60%;
+    border: 1px solid grey;
+    padding: 1rem;
 }
 
-.sub-nav {
-    border: 2px solid #D9D9D9;
-    width: 300px;
-    margin: 4rem;
-}
-
-.sub-nav > a {
-    display: block;
-    padding: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.sub-nav > a:active, .sub-nav > a:hover {
-    background-color: #D9D9D9;
-}
-
-.sub-nav > a > p{
-    display: inline;
-    font-size: 0.85rem;
-    margin-left: 0.5rem;
-}
-
-.content {
-    margin: 4rem 0;
-    padding-right: 4rem;
-    width: calc(100vw - 300px - 8rem - 4rem - 10px);
-}
-
-.content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.content h3 > p{
-    font-size: 1.2rem;
-    display: inline;
-    margin-left: 0.7rem;
-}
-
-.content p{
-    line-height: 1.7rem;
-}
-
-.content > div {
+#map{
+    margin: 4rem auto;
     margin-bottom: 3rem;
+    width:60%;
+    height:400px;
 }
 
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 100px;
-    background-color: #252525;
-
-    position: relative;
-    z-index: 1;
-    left: -0.9rem;
-    top: 0.6rem;
+.map-text-box {
+    margin: 0 auto;
+    padding-bottom: 6rem;
+    width: 60%;
 }
 
-li {
-    border-left: 1px solid #252525;
-    list-style: none;
-    padding: 0.6rem;
+.map-text-box > * {
+    margin: 1rem 0;
 }
 
-.img-box{
-    display:flex;
-    flex-wrap: wrap;
-    
+.map-text-box h3 {
+    font-size: 1.4rem;
 }
 
-.img-box img{
-    width: 300px;
-    margin: 1rem;
+.map-text-box h3:first-child {
+    margin-bottom: 2rem;
+}
+
+.map-text-box h4 {
+    font-size: 1.2rem;
+}
+.map-text-box p {
+    font-weight: bold;
+}
+
+.map-text-box hr {
+    color: rgb(197, 197, 197);
 }
 
 /* 분리할 코드 끝 */
 
-
-
 footer {
     width: 100vw;
-    height: 15vh;
+    height: auto;
     background-color: rgb(224, 224, 224);
     
     display: flex;
@@ -207,8 +187,56 @@ footer > div > p {
     font-size: 0.8rem;
 }
 
-#map{
-    margin: 4rem auto;
-    width:60%;
-    height:400px;
+@media screen and (max-width: 768px){
+    nav {
+        display: block;
+        height: auto;
+    }
+    nav > .title{
+        text-align: center;
+        margin: 1rem;
+        /* padding-bottom: 1rem; */
+        /* border-bottom: 1px solid rgb(202, 202, 202); */
+    }
+    
+    nav > .title > a {
+        font-size: 1.2rem;
+    }
+    
+    nav > .title > p {
+        font-size: 0.6rem;
+    }
+
+    nav > .menu {
+        display: flex;
+        justify-content:space-around;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    nav > .menu > a {
+        margin:0 0.3rem;
+    }
+
+    /* 메인페이지 */
+
+    .carousel > .text-box {
+        width: 300px;
+        left: calc(50% - 150px);
+        
+    }
+    .carousel > .text-box h1 {
+        width: 300px;
+        color: white;
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+        text-align: center;
+    }
+    
+    #map, .map-text-box{
+        width: 90%;
+    }
+   
 }

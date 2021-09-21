@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block style %}
     {% endblock %}
@@ -15,7 +15,7 @@
 <body>
     <nav>
         <div class="title">
-            <a href="{% url 'goMain' %}">서울속기사무소</p></a>
+            <a href="{% url 'goMain' %}">서울속기사무소</a>
             <p>since 2010</p>
         </div>
         <div class="menu">
@@ -45,5 +45,21 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     {% block last %}
     {% endblock %}
+
+    <script>
+        $(".mobile-menu").hide();
+        var toggle = 0;
+
+        function clickMobileMenu(){
+            if(toggle == 0){
+                $(".mobile-menu").show();
+                toggle = 1;
+            }
+            else {
+                $(".mobile-menu").hide();
+                toggle = 0;
+            }
+        }
+    </script>
 </body>
 </html>

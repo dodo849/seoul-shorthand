@@ -6,7 +6,8 @@
 }
 
 .career-content h1{
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
+    margin: 2rem;
     font-size: 2.5rem;
 }
 
@@ -30,7 +31,36 @@
     width: 30%;
     margin: 0 auto;
     height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    background-color: rgb(197, 197, 197);
 }
+
 /* 분리할 코드 끝 */
+
+
+
+@media screen and (max-width: 768px){
+    .container{
+        display: block;
+    }
+
+    .career-content {
+        width: auto;
+    }
+
+    .text-box{
+        margin: 0;
+        width: auto;
+    }
+
+    .text-box h3 {
+        font-size:1.3rem;
+    } 
+
+    .text-box p {
+        font-size: 1rem;
+    }
+
+
+
+    
+}
