@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure-h3hc(ryrd0br^hhk$p!++3_$wkarl21)z2l&-27+=862b5k2ox
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    ".ap-northeast-2.compute.amazonaws.com"
+    "seoul-shorthand.co.kr",
+    ".ap-northeast-2.compute.amazonaws.com",
+    'localhost',
+    '127.0.0.1',
 ]
 
 
