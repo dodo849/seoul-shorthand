@@ -1,0 +1,102 @@
+/* 분리할 코드. - intro 페이지 */
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.sub-nav {
+    border: 2px solid #D9D9D9;
+    width: 250px;
+    margin: 5rem;
+}
+
+.sub-nav > a {
+    display: block;
+    padding: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sub-nav > a:active, .sub-nav > a:hover {
+    background-color: #D9D9D9;
+}
+
+.sub-nav > a > p{
+    display: inline;
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+}
+
+.content {
+    margin: 5rem 0;
+    padding-right: 4rem;
+    width: calc(100vw - 300px - 8rem - 4rem - 10px);
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content h3 > p{
+    font-size: 1.2rem;
+    display: inline;
+    margin-left: 0.7rem;
+}
+
+.content p{
+    line-height: 1.7rem;
+}
+
+.content > div {
+    margin-bottom: 3rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: #252525;
+
+    position: relative;
+    z-index: 1;
+    left: -0.9rem;
+    top: 0.6rem;
+}
+
+li {
+    border-left: 1px solid #252525;
+    list-style: none;
+    padding: 0.6rem;
+}
+
+.img-box{
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.img-box img{
+    width: 300px;
+    margin: 1rem;
+}
+
+/* 분리할 코드 끝 */
+
+@media screen and (max-width: 768px){
+    .sub-nav {
+        display: none;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .content {
+        margin: 3rem;
+        padding: 0;
+        width: auto;
+    }
+}

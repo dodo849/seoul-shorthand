@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #252525;
+}
+
+nav {
+    display: flex;
+    height: 85px;
+
+    border-bottom: 1px solid #D9D9D9;
+}
+
+nav > .title {
+    margin: auto 3rem;
+
+}
+
+nav > .title > a {
+    font-family: 'RIDIBatang';
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+nav > .title > p {
+    font-family: 'RIDIBatang';
+    font-size: 1rem;
+    text-align: center;
+    color: #777;
+}
+
+nav > .title > p:nth-child(2) {
+    font-size: 1rem;
+}
+
+nav > .menu {
+    margin: auto 0;
+}
+
+nav > .menu > a{
+    margin: 2rem;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+nav > .menu > a:hover, nav > .menu > a:active{
+    border-bottom: 3px solid #252525;
+}
+
+.container{
+    min-height: 80vh;
+}
+
+/* 분리할 코드. - main 페이지 */
+.carousel {
+    width: 100vw;
+    height: 80vh;
+    background-color: grey;
+    position: relative;
+}
+
+.carousel > .text-box{
+    position: absolute;
+    z-index: 2;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: 3rem;
+    vertical-align: middle;
+}
+
+.carousel > .text-box h1 {
+    height: 200px;
+    color: white;
+    font-size: 3.8rem;
+    letter-spacing: 0.3rem;
+    margin: auto auto;
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.carousel > .black-layer{
+    width: 100vw;
+    height: 80vh;
+    background-color: black;
+    opacity: 0.8;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.carousel > .image-box {
+
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 80vh;
+}
+
+.carousel .image {
+    position: absolute;
+    min-width: 100vw;
+    height: 80vh;
+}
+
+.carousel .image-1{
+    left: 0;
+}
+
+.carousel .image-2{
+    left: 100vw;
+}
+
+/* 분리할 코드 끝 */
+
+
+/* 분리할 코드. - road 페이지 */
+
+.map-box {
+    margin: 2rem auto;
+    width: 60%;
+    border: 1px solid grey;
+    padding: 1rem;
+}
+
+#map{
+    margin: 4rem auto;
+    margin-bottom: 3rem;
+    width:60%;
+    height:400px;
+}
+
+.map-text-box {
+    margin: 0 auto;
+    padding-bottom: 6rem;
+    width: 60%;
+}
+
+.map-text-box > * {
+    margin: 1rem 0;
+}
+
+.map-text-box h3 {
+    font-size: 1.4rem;
+}
+
+.map-text-box h3:first-child {
+    margin-bottom: 2rem;
+}
+
+.map-text-box h4 {
+    font-size: 1.2rem;
+}
+.map-text-box p {
+    font-weight: bold;
+}
+
+.map-text-box hr {
+    color: rgb(197, 197, 197);
+}
+
+/* 분리할 코드 끝 */
+
+footer {
+    width: 100vw;
+    height: auto;
+    background-color: rgb(224, 224, 224);
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > div {
+    margin: auto 0;
+
+}
+
+footer > div > p {
+    margin: 1.5rem 3rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px){
+    nav {
+        display: block;
+        height: auto;
+    }
+    nav > .title{
+        text-align: center;
+        margin: 1rem;
+        /* padding-bottom: 1rem; */
+        /* border-bottom: 1px solid rgb(202, 202, 202); */
+    }
+    
+    nav > .title > a {
+        font-size: 1.2rem;
+    }
+    
+    nav > .title > p {
+        font-size: 0.6rem;
+    }
+
+    nav > .menu {
+        display: flex;
+        justify-content:space-around;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    nav > .menu > a {
+        margin:0 0.3rem;
+    }
+
+    /* 메인페이지 */
+
+    .carousel > .text-box {
+        width: 300px;
+        left: calc(50% - 150px);
+        
+    }
+    .carousel > .text-box h1 {
+        width: 300px;
+        color: white;
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+        text-align: center;
+    }
+    
+    #map, .map-text-box{
+        width: 90%;
+    }
+   
+}

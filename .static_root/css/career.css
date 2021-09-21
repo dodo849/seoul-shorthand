@@ -1,0 +1,66 @@
+/* 분리할 코드. - career 페이지 */
+.career-content{
+    width: 900px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.career-content h1{
+    /* margin-bottom: 2rem; */
+    margin: 2rem;
+    font-size: 2.5rem;
+}
+
+.career-content h3{
+    font-size: 1.9rem;
+    margin-top:2rem;
+}
+
+.career-content p{
+    font-size: 1.1rem;
+    margin: 2rem 0;
+}
+
+.career-content .line.first-line{
+    width: 60%;
+    height:2px;
+}
+
+.career-content .line{
+    border: 0;
+    width: 30%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgb(197, 197, 197);
+}
+
+/* 분리할 코드 끝 */
+
+
+
+@media screen and (max-width: 768px){
+    .container{
+        display: block;
+    }
+
+    .career-content {
+        width: auto;
+    }
+
+    .text-box{
+        margin: 0;
+        width: auto;
+    }
+
+    .text-box h3 {
+        font-size:1.3rem;
+    } 
+
+    .text-box p {
+        font-size: 1rem;
+    }
+
+
+
+    
+}
