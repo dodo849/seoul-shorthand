@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     {% block style %}
     {% endblock %}
     <title>서울속기사무소</title>
@@ -15,7 +19,10 @@
 <body>
     <nav>
         <div class="title">
-            <a href="{% url 'goMain' %}">서울속기사무소</a>
+            <div>
+                <img src="{% static 'img/title_logo.png' %}" alt="" width="40px;">
+                <a href="{% url 'goMain' %}">서울속기사무소</a>
+            </div>
             <p>since 2010</p>
         </div>
         <div class="menu">
