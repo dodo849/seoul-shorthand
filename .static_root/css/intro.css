@@ -57,13 +57,13 @@
 .dot {
     width: 8px;
     height: 8px;
-    border-radius: 100px;
+    border-radius: 400px;
     background-color: #252525;
 
     position: relative;
     z-index: 1;
-    left: -0.9rem;
-    top: 0.6rem;
+    left: -0.85rem;
+    top: 0.78rem;
 }
 
 li {
