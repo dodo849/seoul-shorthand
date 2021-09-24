@@ -1,14 +1,41 @@
 @font-face {
-    font-family: 'RIDIBatang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Vitro_core';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-family: 'Cafe24Dangdanghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apple SD Gothic Neo';
+    src: url(./.static_root/font/AppleSDGothicNeoM.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Apple SD Gothic Neo';
+    src: url(./.static_root/font/AppleSDGothicNeoL.ttf) format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+
+    font-family: 'Apple SD Gothic Neo';
+    src: url(./.static_root/font/AppleSDGothicNeoB.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+
+    font-family: 'Apple SD Gothic Neo';
+    src: url(./.static_root/font/AppleSDGothicNeoEB.ttf) format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+
+    font-family: 'Apple SD Gothic Neo';
+    src: url(./.static_root/font/AppleSDGothicNeoH.ttf) format("truetype");
+    font-weight: heavey;
     font-style: normal;
 }
 
@@ -17,7 +44,7 @@
     margin: 0;
     padding: 0;
     color: #252525;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
 }
 
 nav {
@@ -33,26 +60,22 @@ nav > .title {
 }
 
 nav > .title a {
-    font-family: 'Vitro_core';
+    font-family: 'Cafe24Danjunghae';
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.250em;
     letter-spacing: 0.1rem;
 }
 
 nav > .title img {
     position: relative;
-    top: 0.8rem;
+    top: 0.3rem;
 }
 
 nav > .title > p {
-    font-family: 'RIDIBatang';
-    font-size: 1rem;
+    font-family: 'Cafe24Dangdanghae';
+    font-size: 0.875em;
     text-align: center;
-    color: #777;
-}
-
-nav > .title > p:nth-child(2) {
-    font-size: 1rem;
+    margin: 5px 0 0 27px;
 }
 
 nav > .menu {
