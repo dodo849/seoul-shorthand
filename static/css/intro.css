@@ -12,7 +12,7 @@
 
 .content-block > .content{
     margin: auto;
-    width: 55rem;
+    width: 47.500em;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -86,17 +86,16 @@ li {
 /* 분리할 코드 끝 */
 
 @media screen and (max-width: 768px){
-    .sub-nav {
-        display: none;
+    .content-block {
+        height: auto;
     }
 
-    .container{
-        display: block;
+    .content-block > .content {
+        width: 85vw;
+        position:static;
+        transform: unset;
+        margin: 5rem auto;
     }
 
-    .content {
-        margin: 3rem;
-        padding: 0;
-        width: auto;
-    }
+    .
 }

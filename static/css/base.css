@@ -211,19 +211,22 @@ footer {
     width: 100vw;
     height: auto;
     background-color: rgb(224, 224, 224);
-    
+
+
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
 footer > div {
-    margin: auto 0;
 
 }
 
 footer > div > p {
-    margin: 1.5rem 3rem;
+    margin: 2.5rem 3rem;
     font-size: 0.8rem;
+    color: #565656;
 }
 
 @media screen and (max-width: 768px){

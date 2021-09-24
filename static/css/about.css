@@ -47,7 +47,7 @@
 }
 
 .content h3 {
-    font-size: 2.188em;
+    font-size: 1.875em;
     margin-bottom: 1rem;
 }
 
@@ -55,11 +55,11 @@
     width: 60%;
     margin: auto;
     margin-bottom: 2.5rem;
-    border-bottom: 2px solid #C9C9C9
+    border-bottom: 1.5px solid #C9C9C9
 }
 
-.content h3 > p{
-    font-size: 1.2rem;
+.content p{
+    font-size: 1rem;
     display: inline;
     margin-left: 0.7rem;
 }
