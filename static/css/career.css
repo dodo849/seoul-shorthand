@@ -43,13 +43,15 @@ hr{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .container{
         display: block;
     }
 
     .career-content {
-        width: auto;
+        width: 100%;
+        margin: 5rem 3rem;
+        justify-content: left;
     }
 
     .text-box{

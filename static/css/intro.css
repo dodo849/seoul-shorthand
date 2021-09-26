@@ -27,12 +27,13 @@
     flex-wrap: wrap;
 }
 
-/* 내용 */
 
-#me, #silver {
-    flex-grow: 1;
+.content > .member {
+    width: 50%;
+    /* flex-grow: 1; */
 }
 
+/* 내용 */
 .content h3 {
     font-size: 2.188em;
     margin-bottom: 1rem;
@@ -85,9 +86,14 @@ li {
 
 /* 분리할 코드 끝 */
 
-@media screen and (max-width: 768px){
-    .content-block {
+@media screen and (max-width: 800px){
+    .content-block, .content-block.large {
         height: auto;
+        padding: 3rem 0;
+    }
+
+    .content-block:first-child {
+        padding: 0rem 0;
     }
 
     .content-block > .content {
@@ -97,5 +103,13 @@ li {
         margin: 5rem auto;
     }
 
-    .
+    .content > .member{
+        /* margin: 0 auto; */
+        width: 85vw;
+    }
+
+    .content > .member:first-child{
+        margin-bottom: 5rem;
+    }
+
 }
