@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div id="map" style=""></div>
+<div class="map-text-box">
+    <div class="content-box">
+        <h3>주소</h3>
+        <p>서울특별시 서초구 서초대로 259 서원빌딩 B101호</p>
+    </div>
+    <div class="content-box">
+        <h3>지하철</h3>
+        <p>서초역 8번 출구, 교대역 10번 출구</p>
+    </div>
+    <div class="content-box">
+        <h3>버스</h3>
+        <div>
+            <p><strong>간선 | </strong>405 742 541</p>
+            <p><strong>지선 | </strong>5413</p>
+            <p><strong>직행 | </strong>1006 3000 3003 3100 3101 3102 3200 3300 3400 6008 6501 G1003 G8157</p>
+            <p><strong>광역 | </strong>9100 9200 9201 9300 M5443 M6405 M6410</p>
+            <p><strong>시외 | </strong> 700, 700-1</p>
+            <!-- <p style="color: #2389DF;"><strong>간선 | </strong>405 742 541</p>
+            <p style="color: #65C82E;"><strong>지선 | </strong>5413</p>
+            <p style="color: #c82e2e;"><strong>직행 | </strong>1006 3000 3003 3100 3101 3102 3200 3300 3400 6008 6501 G1003 G8157</p>
+            <p style="color: #c82e2e;"><strong>광역 | </strong>9100 9200 9201 9300 M5443 M6405 M6410</p>
+            <p style="color: #b489be;"><strong>시외 | </strong> 700, 700-1</p> -->
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block last %}
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=0wq8zyc75t"></script>
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.492804300741525, 127.01004426058868),
+        zoom: 18
+    };
+    
+    var map = new naver.maps.Map('map', mapOptions);
+
+    var marker = new naver.maps.Marker({
+    position: new naver.maps.LatLng(37.492804300741525, 127.0100442605886),
+    map: map
+});
+    </script>
+{% endblock%}
