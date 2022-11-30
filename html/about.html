@@ -1,43 +1,103 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/base.css" />
 
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}">
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/about.css" />
 
-{% block content %}
+    <meta
+      name="naver-site-verification"
+      content="acfa96d3c62483e5580660ca1a071d6f8c823116"
+    />
+    `
+    <title>서울속기사무소</title>
+  </head>
+  <body>
+    <nav>
+      <div class="title">
+        <div>
+          <img src="../img/title_logo.png" alt="" width="27px;" />
+          <a href="./main.html">서울속기사무소</a>
+        </div>
+        <p>since 2010</p>
+      </div>
+      <div class="menu">
+        <a href="./intro.html">소개</a>
+        <a href="./about.html">녹취록/회의록</a>
+        <a href="./career.html">경력</a>
+        <a href="./road.html">오시는길</a>
+      </div>
+    </nav>
 
-<div class="content-block">
-    <div class="content" id="one">
+    <div class="content-block">
+      <div class="content" id="one">
         <div class="question">
-            <h3>Q. 녹취록이란?</h3>
-            <div class="line"></div>
+          <h3>Q. 녹취록이란?</h3>
+          <div class="line"></div>
         </div>
-        <p> 어떤 사건이나 상황을 재생할 수 있도록 음성녹음이나 비디오촬영 등의 방법으로 기록하여 둔 것을 경찰, 검찰, 법원 등 수사기관이나
-             사법기관에 녹취물 증거로 제시하고자 할 때 녹음된 결과물을 직접 제출하는 것이 아니라 녹음된 내용을 문서화하여 제출해야만 
-             하는데 그 문서를 녹취록이라고 합니다.</p>
-    </div>
-</div>
-<div class="content-block grey">
-    <div class="content" id="two">
-        <div class="question">
-            <h3>Q. 회의록이란?</h3>
-            <div class="line"></div>
-        </div>
-        <p>  회의록이란 회의가 이루어지는 장소에서 이루어지는 모든 내용을 작성하여 보관하는 문서입니다. 
-            회의마다 회의록은 반드시 작성하여야 하며 회의에서 결정된 사항을 증명할 수 있는 문서이기도 합니다.</p>
-        </ul>
-    </div>
-</div>
-<div class="content-block">
-    <div class="content" id="three">
-        <div class="question">
-            <h3>Q. 작업 문의</h3>
-            <div class="line"></div>
-        </div>
-        <p>   작업 과정 및 비용 문의는 직접 방문 혹은 전화 주시기 바랍니다.
+        <p>
+          어떤 사건이나 상황을 재생할 수 있도록 음성녹음이나 비디오촬영 등의
+          방법으로 기록하여 둔 것을 경찰, 검찰, 법원 등 수사기관이나 사법기관에
+          녹취물 증거로 제시하고자 할 때 녹음된 결과물을 직접 제출하는 것이
+          아니라 녹음된 내용을 문서화하여 제출해야만 하는데 그 문서를
+          녹취록이라고 합니다.
         </p>
-        </ul>
+      </div>
     </div>
-</div>
-{% endblock %}
+    <div class="content-block grey">
+      <div class="content" id="two">
+        <div class="question">
+          <h3>Q. 회의록이란?</h3>
+          <div class="line"></div>
+        </div>
+        <p>
+          회의록이란 회의가 이루어지는 장소에서 이루어지는 모든 내용을 작성하여
+          보관하는 문서입니다. 회의마다 회의록은 반드시 작성하여야 하며 회의에서
+          결정된 사항을 증명할 수 있는 문서이기도 합니다.
+        </p>
+      </div>
+    </div>
+    <div class="content-block">
+      <div class="content" id="three">
+        <div class="question">
+          <h3>Q. 작업 문의</h3>
+          <div class="line"></div>
+        </div>
+        <p>작업 과정 및 비용 문의는 직접 방문 혹은 전화 주시기 바랍니다.</p>
+      </div>
+    </div>
+    <footer>
+      <p>주소 | 서울특별시 서초구 서초대로 259 서원빌딩 B101호</p>
+      <p>번호 | 02-596-3660</p>
+      <p>FAX | 02-594-1625</p>
+      <p>이메일 | cd8343@daum.net</p>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script>
+      $(".mobile-menu").hide();
+      var toggle = 0;
+
+      function clickMobileMenu() {
+        if (toggle == 0) {
+          $(".mobile-menu").show();
+          toggle = 1;
+        } else {
+          $(".mobile-menu").hide();
+          toggle = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

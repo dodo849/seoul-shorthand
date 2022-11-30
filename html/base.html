@@ -1,5 +1,7 @@
 {% load static %}
 
+
+<!-- @Deprecated -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="../css/base.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,16 +26,16 @@
     <nav>
       <div class="title">
         <div>
-          <img src="{% static 'img/title_logo.png' %}" alt="" width="27px;" />
-          <a href="{% url 'goMain' %}">서울속기사무소</a>
+          <img src="../img/title_logo.png" alt="" width="27px;" />
+          <a href="./main.html">서울속기사무소</a>
         </div>
         <p>since 2010</p>
       </div>
       <div class="menu">
-        <a href="{% url 'goIntro' %}">소개</a>
-        <a href="{% url 'goAbout' %}">녹취록/회의록</a>
-        <a href="{% url 'goCareer' %}">경력</a>
-        <a href="{% url 'goRoad' %}">오시는길</a>
+        <a href="./intro.html">소개</a>
+        <a href="./about.html">녹취록/회의록</a>
+        <a href="./career.html">경력</a>
+        <a href="./road.html">오시는길</a>
       </div>
     </nav>
     <div class="container">{% block content %} {% endblock %}</div>

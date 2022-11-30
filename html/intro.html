@@ -1,68 +1,164 @@
-{% extends 'base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/base.css" />
 
-{% block style %}
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<link rel="stylesheet" href="{% static 'css/intro.css' %}">
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="../css/intro.css" />
 
-{% block content %}
-<!-- <div class="sub-nav">
+    <meta
+      name="naver-site-verification"
+      content="acfa96d3c62483e5580660ca1a071d6f8c823116"
+    />
+    `
+    <title>서울속기사무소</title>
+  </head>
+  <body>
+    <nav>
+      <div class="title">
+        <div>
+          <img src="../img/title_logo.png" alt="" width="27px;" />
+          <a href="./main.html">서울속기사무소</a>
+        </div>
+        <p>since 2010</p>
+      </div>
+      <div class="menu">
+        <a href="./intro.html">소개</a>
+        <a href="./about.html">녹취록/회의록</a>
+        <a href="./career.html">경력</a>
+        <a href="./road.html">오시는길</a>
+      </div>
+    </nav>
+    <!-- <div class="sub-nav">
     <a href="#history">회사연혁</a>
     <a href="#me">신미영<p>소장</p></a>
     <a href="#silver">김은영<p>소장</p></a>
     <a href="#company-img">사무실 전경</a>
 </div> -->
-<div class="content-block">
-    <div class="content">
-        <hr>
+    <div class="content-block">
+      <div class="content">
+        <hr />
         <h3>회사 연혁</h3>
-        <p>2010년 개업이래 흔들림 없이 서초동을 지켜왔으며, <br>
-        <strong>수만 건 이상의 다양한 작업으로 쌓은 노하우</strong>를 통해 고객님께 <strong>완벽한 작업물</strong>로 보답해드리겠습니다.</p>
+        <p>
+          2010년 개업이래 흔들림 없이 서초동을 지켜왔으며, <br />
+          <strong>수만 건 이상의 다양한 작업으로 쌓은 노하우</strong>를 통해
+          고객님께 <strong>완벽한 작업물</strong>로 보답해드리겠습니다.
+        </p>
+      </div>
     </div>
-</div>
-<div class="content-block grey">
-    <div class="content flex">
+    <div class="content-block grey">
+      <div class="content flex">
         <div class="member">
-            <hr>
-            <h3>신미영<p>소장</p></h3>
-            <ul>
-                <li><div class="dot"></div>1996. 국제컴퓨터속기사무소</li>
-                <li><div class="dot"></div>2006. 최안나속기사사무소</li>
-                <li><div class="dot"></div>2010. 서울속기사무소 개업</li>
-            </ul>
+          <hr />
+          <h3>
+            신미영
+            <p>소장</p>
+          </h3>
+          <ul>
+            <li>
+              <div class="dot"></div>
+              1996. 국제컴퓨터속기사무소
+            </li>
+            <li>
+              <div class="dot"></div>
+              2006. 최안나속기사사무소
+            </li>
+            <li>
+              <div class="dot"></div>
+              2010. 서울속기사무소 개업
+            </li>
+          </ul>
         </div>
         <div class="member">
-            <hr>
-            <h3>김은영<p>소장</p></h3>
-            <ul>
-                <li><div class="dot"></div>2010. 서울속기사무소 개업</li>
-            </ul>
+          <hr />
+          <h3>
+            김은영
+            <p>소장</p>
+          </h3>
+          <ul>
+            <li>
+              <div class="dot"></div>
+              2010. 서울속기사무소 개업
+            </li>
+          </ul>
         </div>
-    </div>  
-</div>
-<div class="content-block large">
-    <div class="content" id="company-img">
-        <hr>
+      </div>
+    </div>
+    <div class="content-block large">
+      <div class="content" id="company-img">
+        <hr />
         <h3>사무실 전경</h3>
         <div>
-            <div class="img-box">
-                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img1.JPG' %}"><img src="{% static 'img/img1.JPG' %}" alt=""></a>
-                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img2.JPG' %}"><img src="{% static 'img/img2.JPG' %}" alt=""></a>
-            </div>
-            <div class="img-box">
-                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img3.JPG' %}"><img src="{% static 'img/img3.JPG' %}" alt=""></a>
-                <a rel="fancybox" data-fancybox id="single_image" href="{% static 'img/img4.JPG' %}"><img src="{% static 'img/img4.JPG' %}" alt=""></a>
-            </div>
+          <div class="img-box">
+            <a
+              rel="fancybox"
+              data-fancybox
+              id="single_image"
+              href="../img/img1.JPG"
+              ><img src="../img/img1.JPG" alt=""
+            /></a>
+            <a
+              rel="fancybox"
+              data-fancybox
+              id="single_image"
+              href="../img/img2.JPG"
+              ><img src="../img/img2.JPG" alt=""
+            /></a>
+          </div>
+          <div class="img-box">
+            <a
+              rel="fancybox"
+              data-fancybox
+              id="single_image"
+              href="../img/img3.JPG"
+              ><img src="../img/img3.JPG" alt=""
+            /></a>
+            <a
+              rel="fancybox"
+              data-fancybox
+              id="single_image"
+              href="../img/img4.JPG"
+              ><img src="../img/img4.JPG" alt=""
+            /></a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-{% endblock %}
+    <footer>
+      <p>주소 | 서울특별시 서초구 서초대로 259 서원빌딩 B101호</p>
+      <p>번호 | 02-596-3660</p>
+      <p>FAX | 02-594-1625</p>
+      <p>이메일 | cd8343@daum.net</p>
+    </footer>
 
-{% block last %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(".mobile-menu").hide();
+      var toggle = 0;
 
-{% endblock %}
+      function clickMobileMenu() {
+        if (toggle == 0) {
+          $(".mobile-menu").show();
+          toggle = 1;
+        } else {
+          $(".mobile-menu").hide();
+          toggle = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

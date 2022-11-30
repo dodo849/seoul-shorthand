@@ -1,21 +1,79 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/base.css" />
 
-{% block content %}
-<div class="carousel">
-    <div class="text-box">
-            <h1 class="detail1">의뢰인의 입장에서<br>최선을 다합니다</h1>
-    </div>
-    <div class="black-layer"></div>
-    <div class="image-box">
-        <img class="image image-1" src="" alt="">
-        <img class="image image-2" src="" alt="">
-    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="naver-site-verification"
+      content="acfa96d3c62483e5580660ca1a071d6f8c823116"
+    />
     
+    <title>서울속기사무소</title>
+  </head>
+  <body>
+    <nav>
+      <div class="title">
+        <div>
+          <img src="../img/title_logo.png" alt="" width="27px;" />
+          <a href="./main.html">서울속기사무소</a>
+        </div>
+        <p>since 2010</p>
+      </div>
+      <div class="menu">
+        <a href="./intro.html">소개</a>
+        <a href="./about.html">녹취록/회의록</a>
+        <a href="./career.html">경력</a>
+        <a href="./road.html">오시는길</a>
+      </div>
+    </nav>
+    <div class="carousel">
+      <div class="text-box">
+        <h1 class="detail1">의뢰인의 입장에서<br />최선을 다합니다</h1>
+      </div>
+      <div class="black-layer"></div>
+      <div class="image-box">
+        <img class="image image-1" src="" alt="" />
+        <img class="image image-2" src="" alt="" />
+      </div>
+    </div>
+    <footer>
+      <p>주소 | 서울특별시 서초구 서초대로 259 서원빌딩 B101호</p>
+      <p>번호 | 02-596-3660</p>
+      <p>FAX | 02-594-1625</p>
+      <p>이메일 | cd8343@daum.net</p>
+    </footer>
 
-</div>
-{% endblock %}
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+    ></script>
 
-{% block last %}
-<script type="text/javascript" src="../../static/js/base.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-{% endblock %}
+    <script>
+      $(".mobile-menu").hide();
+      var toggle = 0;
+
+      function clickMobileMenu() {
+        if (toggle == 0) {
+          $(".mobile-menu").show();
+          toggle = 1;
+        } else {
+          $(".mobile-menu").hide();
+          toggle = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

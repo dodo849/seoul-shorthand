@@ -7,8 +7,8 @@ var imgCnt = 0;
 var imgCntNext = 1;
 var switchCnt = 0;
 
-$(".carousel .image-1").attr('src', '../../static/img/'+imgList[imgCnt]);
-$(".carousel .image-2").attr('src', '../../static/img/'+imgList[imgCntNext]);
+$(".carousel .image-1").attr('src', '../img/'+imgList[imgCnt]);
+$(".carousel .image-2").attr('src', '../img/'+imgList[imgCntNext]);
 
 setInterval(function() {
 
@@ -20,7 +20,7 @@ setInterval(function() {
 
     if(switchCnt == 0) {
         $(".carousel .image-2").css('left', '100vw');
-        $(".carousel .image-2").attr('src', '../../static/img/'+imgList[imgCntNext]);
+        $(".carousel .image-2").attr('src', '../img/'+imgList[imgCntNext]);
 
         $(".carousel .image-1").animate({
             left: '-100vw'
@@ -34,7 +34,7 @@ setInterval(function() {
     }
     else {
         $(".carousel .image-1").css('left', '100vw');
-        $(".carousel .image-1").attr('src', '../../static/img/'+imgList[imgCntNext]);
+        $(".carousel .image-1").attr('src', '../img/'+imgList[imgCntNext]);
 
         $(".carousel .image-2").animate({
             left: '-100vw'
